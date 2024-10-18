@@ -54,7 +54,7 @@ function App() {
           </div>
           <div className="skills-row">
             <div className="skill-type">Databases: &nbsp;</div>
-            <div>PostgreSQL, MongoDB, ElasticSearch, Hadoop, Hive</div>
+            <div>PostgreSQL, MongoDB, ElasticSearch</div>
           </div>
           <div className="skills-row">
             <div className="skill-type">Technologies: &nbsp;</div>
@@ -111,7 +111,7 @@ function App() {
           <div className="resume-card">
             <div className="chronology">
               <div className="card-header">Northeastern University</div>
-              <div className="card-date">Oct 2017 - Mar 2020</div>
+              <div className="card-date">Jul 2015 - Aug 2017</div>
             </div>
             <div className="card-details">
               <div className="edu-degree">Master of Science</div>
