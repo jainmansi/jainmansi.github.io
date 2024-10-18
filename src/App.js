@@ -96,6 +96,16 @@ function App() {
             </div>
           </div>
 
+          <div className="resume-card">
+            <div className="chronology">
+              <div className="card-header">Ericsson</div>
+              <div className="card-date">May 2016 - Dec 2016</div>
+            </div>
+            <div className="card-details">
+              <div className="resume-job-title">Software Engineer Intern</div>
+            </div>
+          </div>
+
           <div className="section-header">Education</div>
           <div className="resume-card">
             <div className="chronology">
