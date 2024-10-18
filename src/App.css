@@ -236,8 +236,9 @@ footer {
 
 @media (max-width: 600px) {
   .intro-section {
-    margin-top: 50%;
+    /* margin-top: 50%; */
     flex-direction: column-reverse;
+    height: max-content;
   }
 
   .intro-text {
@@ -245,10 +246,10 @@ footer {
     width: 100%;
   }
 
-  .profile-pic {
-    margin-top: 100px;
+  /* .profile-pic {
+    margin-top: 300px;
     justify-content: flex-start;
-  }
+  } */
 
   .header-img {
     height: 40px;
