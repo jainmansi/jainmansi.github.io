@@ -1,37 +1,49 @@
+import { useState } from 'react';
+
 import './App.css';
-import logo from "./logo.png";
+import name from "./name.png";
 import header from "./header4.png";
 import profilePic from "./profile-pic.jpeg"
-import { github, linkedin, mail } from './icons';
+import { github, linkedin, mail, newTab } from './icons';
+
+
 
 function App() {
+  const [hamburgerActive, setHamburgerActive] = useState(false);
+
+
+  function handleHamburgerClick() {
+    setHamburgerActive(!hamburgerActive);
+    console.log(hamburgerActive)
+  }
+
   return (
     <>
       <div className="nav">
         <img className='header-img' src={header} />
-        <input type="checkbox" id="nav-check" />
         <div className="nav-header">
         </div>
-        <div className="nav-btn">
-          <label for="nav-check">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
+        <div className={`hamburger ${hamburgerActive ? "active" : ""}`} onClick={() => handleHamburgerClick()}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
         </div>
 
-        <div className="nav-links">
-          <a href="#">Home</a>
-          <a href="#skills">Skills</a>
-          <a href="#resume">Resume</a>
-          <a href="#contact">Contact</a>
+        <div className={`nav-links ${hamburgerActive ? "active" : ""}`}>
+          <a className="nav-link" onClick={() => setHamburgerActive(false)} href="#">Home</a>
+          <a className="nav-link" onClick={() => setHamburgerActive(false)} href="#skills">Skills</a>
+          <a className="nav-link" onClick={() => setHamburgerActive(false)} href="#resume">Resume</a>
+          <a className="nav-link" onClick={() => setHamburgerActive(false)} href="#contact">Contact</a>
         </div>
       </div>
       <section className="intro-section">
         <div className="intro-text">
-          <img className="name-img" src={logo} />
+          <img className="name-img" src={name} />
           <div className="job-title">Member of Technical Staff at AMD</div>
-          <div className="job-subtitle">I build full-stack applications, automate workflows, and manage distributed systems. With expertise in Python, JavaScript, and React, I'm always eager to learn more. Currently pursuing my Master of Science in AI at University of Texas at Austin.</div>
+          <div className="job-subtitle">
+            I build full-stack applications, automate workflows, and manage distributed systems. With expertise in Python, JavaScript, and React, I'm always eager to learn more. Currently pursuing my Master of Science in AI at University of Texas at Austin.
+            <br />In my free time, I write <a href="https://medium.com/@jainmansi">blogs</a>, read <a href="https://www.goodreads.com/user/show/142953896-mansi-jain" target="_blank" rel="noreferer">non-fiction</a> or play ping-pong.
+          </div>
         </div>
 
         <img src={profilePic} className="profile-pic" />
@@ -160,7 +172,7 @@ function App() {
         </div>
       </section>
       <footer>
-          &copy; 2024 by Mansi Jain
+        &copy; 2024 by Mansi Jain
       </footer>
     </>
 
