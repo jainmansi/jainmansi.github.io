@@ -128,12 +128,6 @@ function App() {
           </div>
 
           <div className="section-header">Education</div>
-          <div className="resume-card">
-            <div className="card-details">
-              <div className="edu-degree">Master of Science</div>
-              <div className="edu-major">Artificial Intelligence</div>
-            </div>
-          </div>
 
           <div className="resume-card">
             <div className="chronology">
