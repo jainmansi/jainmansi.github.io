@@ -41,7 +41,7 @@ function App() {
           <img className="name-img" src={name} />
           <div className="job-title">Engineering at Meta |{mapPin}San Francisco</div>
           <div className="job-subtitle">
-            I build full-stack applications, automate workflows, and manage distributed systems. With expertise in Python, JavaScript, and React, I'm always eager to learn more. Currently pursuing my Master of Science in AI at University of Texas at Austin.
+            I build full-stack applications, automate workflows, and manage distributed systems. With expertise in Python, JavaScript, and React, I'm always eager to learn more.
             <br />In my free time, I write <a href="https://medium.com/@jainmansi">blogs</a>, read <a href="https://www.goodreads.com/user/show/142953896-mansi-jain" target="_blank" rel="noreferer">non-fiction</a> or play ping-pong.
           </div>
         </div>
