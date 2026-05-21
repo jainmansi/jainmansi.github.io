@@ -129,10 +129,6 @@ function App() {
 
           <div className="section-header">Education</div>
           <div className="resume-card">
-            <div className="chronology">
-              <div className="card-header">University of Texas at Austin</div>
-              <div className="card-date">Aug 2024 - Present</div>
-            </div>
             <div className="card-details">
               <div className="edu-degree">Master of Science</div>
               <div className="edu-major">Artificial Intelligence</div>
