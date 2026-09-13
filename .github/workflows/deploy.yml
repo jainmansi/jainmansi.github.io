@@ -1,0 +1,51 @@
+name: Build & Deploy
+
+# Deploys the site to the `master` branch (served by GitHub Pages) on:
+#  - every push to `app` (code changes)
+#  - a daily schedule (so Substack + Goodreads stay fresh)
+#  - manual trigger from the Actions tab
+on:
+  push:
+    branches: [app]
+  schedule:
+    - cron: '17 13 * * *' # ~06:17 PT daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: app
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      # Pull the latest posts / books into public/data before building.
+      - name: Refresh feeds
+        run: node scripts/fetch-feeds.js
+
+      - name: Build
+        run: npm run build
+        env:
+          CI: false # treat CRA warnings as warnings, not errors
+
+      - name: Deploy to master
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: master
+          publish_dir: ./build
+          # CNAME is carried through from public/CNAME -> build/CNAME by the build.

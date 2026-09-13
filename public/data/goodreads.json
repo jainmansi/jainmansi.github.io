@@ -1,0 +1,90 @@
+{
+  "current": [
+    {
+      "title": "Flowers for Algernon",
+      "author": "Daniel Keyes",
+      "link": "https://www.goodreads.com/review/show/7419775814?utm_medium=api&utm_source=rss",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1689071681l/18373.jpg",
+      "rating": 0
+    },
+    {
+      "title": "Enlightenment Now: The Case for Reason, Science, Humanism, and Progress",
+      "author": "Steven Pinker",
+      "link": "https://www.goodreads.com/review/show/8906750240?utm_medium=api&utm_source=rss",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1502223499l/35696171._SY475_.jpg",
+      "rating": 0
+    },
+    {
+      "title": "God, Human, Animal, Machine: Technology, Metaphor, and the Search for Meaning",
+      "author": "Meghan O'Gieblyn",
+      "link": "https://www.goodreads.com/review/show/8406277411?utm_medium=api&utm_source=rss",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1611107182l/56097578._SY475_.jpg",
+      "rating": 0
+    },
+    {
+      "title": "Numbers Don't Lie: 71 Things You Need to Know About the World",
+      "author": "Vaclav Smil",
+      "link": "https://www.goodreads.com/review/show/8084089006?utm_medium=api&utm_source=rss",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1666542864l/50705179._SY475_.jpg",
+      "rating": 0
+    }
+  ],
+  "read": [
+    {
+      "title": "Strangers: A Memoir of Marriage",
+      "author": "Belle Burden",
+      "link": "https://www.goodreads.com/review/show/8898618066?utm_medium=api&utm_source=rss",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1749266330l/231108670._SY475_.jpg",
+      "rating": 4
+    },
+    {
+      "title": "The Anthropocene Reviewed: Essays on a Human-Centered Planet",
+      "author": "John  Green",
+      "link": "https://www.goodreads.com/review/show/5041284253?utm_medium=api&utm_source=rss",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1616514130l/55145261.jpg",
+      "rating": 5
+    },
+    {
+      "title": "Give and Take: A Revolutionary Approach to Success",
+      "author": "Adam M. Grant",
+      "link": "https://www.goodreads.com/review/show/8771107916?utm_medium=api&utm_source=rss",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1356136579l/16158498.jpg",
+      "rating": 4
+    },
+    {
+      "title": "Secure: The Revolutionary Guide to Creating a Secure Life",
+      "author": "Amir Levine",
+      "link": "https://www.goodreads.com/review/show/8771095220?utm_medium=api&utm_source=rss",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1757732154l/238766960._SY475_.jpg",
+      "rating": 3
+    },
+    {
+      "title": "The Courage to Be Disliked: How to Free Yourself, Change Your Life and Achieve Real Happiness",
+      "author": "Ichiro Kishimi",
+      "link": "https://www.goodreads.com/review/show/8269344496?utm_medium=api&utm_source=rss",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1545421684l/43306206._SY475_.jpg",
+      "rating": 2
+    },
+    {
+      "title": "Lean In: Women, Work, and the Will to Lead",
+      "author": "Sheryl Sandberg",
+      "link": "https://www.goodreads.com/review/show/8630700184?utm_medium=api&utm_source=rss",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1630483761l/16071764._SY475_.jpg",
+      "rating": 5
+    },
+    {
+      "title": "Genome: The Autobiography of a Species in 23 Chapters",
+      "author": "Matt Ridley",
+      "link": "https://www.goodreads.com/review/show/6170511138?utm_medium=api&utm_source=rss",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1439697027l/4591._SY475_.jpg",
+      "rating": 5
+    },
+    {
+      "title": "Grit: The Power of Passion and Perseverance",
+      "author": "Angela Duckworth",
+      "link": "https://www.goodreads.com/review/show/8471395287?utm_medium=api&utm_source=rss",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1632024090l/27213329._SY475_.jpg",
+      "rating": 2
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "title": "Is this article AI or cake?",
+      "subtitle": "Because sometimes I genuinely can’t tell",
+      "link": "https://jainmansi.substack.com/p/is-this-article-ai-or-cake",
+      "date": "Aug 25, 2026",
+      "image": "https://substackcdn.com/image/fetch/$s_!pCxc!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F872b67ca-54bc-4634-b34b-92ac1daa4790_1448x1086.png"
+    },
+    {
+      "title": "A Blameless Postmortem",
+      "subtitle": "Six months of learning things the hard way",
+      "link": "https://jainmansi.substack.com/p/a-blameless-portmortem",
+      "date": "Jul 20, 2026",
+      "image": "https://substackcdn.com/image/fetch/$s_!KqKz!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F89a32a9d-7850-492b-a900-43d88a1d85fa_1536x1024.png"
+    },
+    {
+      "title": "Ship Fast, Break Everything",
+      "subtitle": "Vibe-Coding the Next Security Crisis",
+      "link": "https://jainmansi.substack.com/p/ship-fast-break-everything",
+      "date": "Mar 6, 2026",
+      "image": "https://substackcdn.com/image/fetch/$s_!r9ge!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1822e94b-3a77-4afe-baf7-0e900b2246aa_1408x768.png"
+    },
+    {
+      "title": "The Un-Checklist of a Life",
+      "subtitle": "two-cents from a recovering optimizer",
+      "link": "https://jainmansi.substack.com/p/the-un-checklist-of-a-life",
+      "date": "Dec 30, 2025",
+      "image": "https://substackcdn.com/image/fetch/$s_!gvbr!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F12543daa-a175-4be6-b782-a27052bd1104_1800x1800.heic"
+    },
+    {
+      "title": "One Shoulder-Check and 5 Helping Hands",
+      "subtitle": "Ouch!",
+      "link": "https://jainmansi.substack.com/p/one-shoulder-check-and-5-helping",
+      "date": "Oct 8, 2025",
+      "image": "https://images.unsplash.com/photo-1616795255936-1b07b33470a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMDAzMzh8MHwxfHNlYXJjaHwxM3x8aHVtYW58ZW58MHx8fHwxNzU5OTkxMTg3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+    },
+    {
+      "title": "From Bookworms to Scroll Zombies",
+      "subtitle": "Just put your goddamn phone away",
+      "link": "https://jainmansi.substack.com/p/from-bookworms-to-scroll-zombies",
+      "date": "Jun 26, 2025",
+      "image": "https://substackcdn.com/image/fetch/$s_!_VUI!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe2fdc76e-fea9-4768-a752-8ce8fd69ebc9_1024x1024.heic"
+    }
+  ]
+}

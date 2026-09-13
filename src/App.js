@@ -4,7 +4,8 @@ import './App.css';
 import name from "./name.png";
 import header from "./header4.png";
 import profilePic from "./profile-pic.jpeg"
-import { github, linkedin, mail, x, mapPin } from './icons';
+import { github, linkedin, mail, x, mapPin, substack, goodreads } from './icons';
+import { Writing, Reading } from './sections';
 
 
 
@@ -33,6 +34,8 @@ function App() {
           <a className="nav-link" onClick={() => setHamburgerActive(false)} href="#">Home</a>
           <a className="nav-link" onClick={() => setHamburgerActive(false)} href="#skills">Skills</a>
           <a className="nav-link" onClick={() => setHamburgerActive(false)} href="#resume">Resume</a>
+          <a className="nav-link" onClick={() => setHamburgerActive(false)} href="#writing">Writing</a>
+          <a className="nav-link" onClick={() => setHamburgerActive(false)} href="#reading">Reading</a>
           <a className="nav-link" onClick={() => setHamburgerActive(false)} href="#contact">Contact</a>
         </div>
       </div>
@@ -52,26 +55,22 @@ function App() {
       <section id="skills" className="skills-section">
         <div className="section-header">Skills</div>
         <div className="skills">
-          <div className="skills-row">
-            <div className="skill-type">Programming Languages: &nbsp;</div>
-            <div>Python, JavaScript, Hack, HTML / CSS, SQL, Ansible</div>
-          </div>
-          <div className="skills-row">
-            <div className="skill-type">Web Technologies: &nbsp;</div>
-            <div>React, Redux, Rest APIs, WebSockets</div>
-          </div>
-          <div className="skills-row">
-            <div className="skill-type">API Frameworks: &nbsp;</div>
-            <div>FastAPI, Flask, Django</div>
-          </div>
-          <div className="skills-row">
-            <div className="skill-type">Databases: &nbsp;</div>
-            <div>PostgreSQL, MongoDB, ElasticSearch</div>
-          </div>
-          <div className="skills-row">
-            <div className="skill-type">Technologies: &nbsp;</div>
-            <div>AWS, Kafka, Docker, Kubernetes, Figma</div>
-          </div>
+          {[
+            ["Programming Languages", ["Python", "JavaScript", "Hack", "HTML / CSS", "SQL", "Ansible"]],
+            ["Web Technologies", ["React", "Redux", "Rest APIs", "WebSockets"]],
+            ["API Frameworks", ["FastAPI", "Flask", "Django"]],
+            ["Databases", ["PostgreSQL", "MongoDB", "ElasticSearch"]],
+            ["Technologies", ["AWS", "Kafka", "Docker", "Kubernetes", "Figma"]],
+          ].map(([type, items]) => (
+            <div className="skills-row" key={type}>
+              <div className="skill-type">{type}: &nbsp;</div>
+              <div>
+                {items.map((s) => (
+                  <span className="skill-pill" key={s}>{s}</span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -154,6 +153,10 @@ function App() {
         </div>
       </section>
 
+      <Writing />
+
+      <Reading />
+
       <section id="contact" className="contact-section">
         <div className="section-header">Let's get in touch</div>
         <div className="contact-details">
@@ -166,6 +169,12 @@ function App() {
             </a>
             <a href="https://x.com/mansijain_" rel="noreferrer" target="_blank">
               {x}
+            </a>
+            <a href="https://jainmansi.substack.com" rel="noreferrer" target="_blank">
+              {substack}
+            </a>
+            <a href="https://www.goodreads.com/user/show/142953896-mansi-jain" rel="noreferrer" target="_blank">
+              {goodreads}
             </a>
             <a href="mailto:mansijain.nitrr@gmail.com">
               {mail}
