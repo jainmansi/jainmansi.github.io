@@ -1,192 +1,151 @@
 import { useState } from 'react';
 
 import './App.css';
-import name from "./name.png";
-import header from "./header4.png";
-import profilePic from "./profile-pic.jpeg"
-import { github, linkedin, mail, x, mapPin, substack, goodreads } from './icons';
+import logo from "./logo.png";
+import profilePic from "./profile-pic.jpeg";
+import { github, linkedin, mail, x, mapPin } from './icons';
 import { Writing, Reading } from './sections';
 
+const SKILLS = [
+  ["Languages", ["Python", "JavaScript", "Hack", "SQL", "HTML / CSS", "Ansible"]],
+  ["Web", ["React", "Redux", "REST", "WebSockets"]],
+  ["Backend", ["FastAPI", "Flask", "Django"]],
+  ["Data", ["PostgreSQL", "MongoDB", "ElasticSearch"]],
+  ["Infra", ["AWS", "Kafka", "Docker", "Kubernetes"]],
+];
 
+const EXPERIENCE = [
+  { org: "Meta", role: "Senior Software Engineer", date: "2025 — Now" },
+  { org: "AMD", role: "Member of Technical Staff", date: "2022 — 2025" },
+  { org: "AMD", role: "Senior Software Engineer", date: "2020 — 2022" },
+  { org: "Cirrus Logic", role: "Software Engineer", date: "2017 — 2020" },
+  { org: "Ericsson", role: "Software Engineer Intern", date: "2016" },
+];
+
+const EDUCATION = [
+  { org: "Northeastern University", role: "M.S., Information Systems", date: "2015 — 2017" },
+  { org: "NIT Raipur", role: "B.Tech, Information Technology", date: "2011 — 2015" },
+];
+
+export function MagHead({ title, id }) {
+  return (
+    <div className="mag-head" id={id}>
+      <h2 className="mag-title">{title}</h2>
+      <span className="mag-rule" />
+    </div>
+  );
+}
+
+function Timeline({ items }) {
+  return (
+    <div className="timeline">
+      {items.map((it, i) => (
+        <div className="tl-row" key={`${it.org}-${i}`}>
+          <div className="tl-date">{it.date}</div>
+          <div className="tl-marker" aria-hidden="true" />
+          <div className="tl-content">
+            <div className="tl-role">{it.role}</div>
+            <div className="tl-org">{it.org}{it.note && <span className="tl-note"> — {it.note}</span>}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 function App() {
-  const [hamburgerActive, setHamburgerActive] = useState(false);
-
-
-  function handleHamburgerClick() {
-    setHamburgerActive(!hamburgerActive);
-    console.log(hamburgerActive)
-  }
+  const [menuOpen, setMenuOpen] = useState(false);
+  const close = () => setMenuOpen(false);
 
   return (
     <>
-      <div className="nav">
-        <img className='header-img' src={header} />
-        <div className="nav-header">
+      <header className="masthead">
+        <a href="#top" className="wordmark" onClick={close}>
+          <img className="brand-mark" src={logo} alt="" />
+          <span>Mansi Jain</span>
+        </a>
+        <div className={`hamburger ${menuOpen ? "active" : ""}`} onClick={() => setMenuOpen(!menuOpen)}>
+          <span className="bar" /><span className="bar" /><span className="bar" />
         </div>
-        <div className={`hamburger ${hamburgerActive ? "active" : ""}`} onClick={() => handleHamburgerClick()}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </div>
+        <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
+          <a className="nav-link" onClick={close} href="#skills">Skills</a>
+          <a className="nav-link" onClick={close} href="#work">Work</a>
+          <a className="nav-link" onClick={close} href="#writing">Writing</a>
+          <a className="nav-link" onClick={close} href="#reading">Reading</a>
+          <a className="nav-link" onClick={close} href="#contact">Contact</a>
+        </nav>
+      </header>
 
-        <div className={`nav-links ${hamburgerActive ? "active" : ""}`}>
-          <a className="nav-link" onClick={() => setHamburgerActive(false)} href="#">Home</a>
-          <a className="nav-link" onClick={() => setHamburgerActive(false)} href="#skills">Skills</a>
-          <a className="nav-link" onClick={() => setHamburgerActive(false)} href="#resume">Resume</a>
-          <a className="nav-link" onClick={() => setHamburgerActive(false)} href="#writing">Writing</a>
-          <a className="nav-link" onClick={() => setHamburgerActive(false)} href="#reading">Reading</a>
-          <a className="nav-link" onClick={() => setHamburgerActive(false)} href="#contact">Contact</a>
-        </div>
-      </div>
-      <section className="intro-section">
-        <div className="intro-text">
-          <img className="name-img" src={name} />
-          <div className="job-title">Engineering at Meta |{mapPin}San Francisco</div>
-          <div className="job-subtitle">
-            Senior Software Engineer at Meta, working on agentic AI infrastructure. Previously Staff at AMD. I like building systems other people end up depending on.
-            <br />Off the clock: <a href="https://jainmansi.substack.com">writing</a>, <a href="https://www.goodreads.com/user/show/142953896-mansi-jain" target="_blank" rel="noreferer">reading</a>, tennis, and play ping-pong.
+      <main id="top">
+        {/* ---- hero ---- */}
+        <section className="hero">
+          <div className="hero-text">
+            <div className="eyebrow">The internet home of</div>
+            <h1 className="hero-name">Mansi Jain</h1>
+            <div className="hero-meta">
+              Engineering at Meta <span className="dot">·</span>{mapPin}San Francisco
+            </div>
+            <p className="hero-bio">
+              I work on agentic AI infrastructure at Meta, and was previously Staff at AMD.
+              I like building the kind of systems other people end up depending on. Off the clock, I'm usually{' '}
+              <a href="https://jainmansi.substack.com" target="_blank" rel="noreferrer">writing</a>,{' '}
+              <a href="https://www.goodreads.com/user/show/142953896-mansi-jain" target="_blank" rel="noreferrer">reading</a>,
+              on the tennis court, or at the ping-pong table.
+            </p>
           </div>
-        </div>
 
-        <img src={profilePic} className="profile-pic" />
-      </section>
+          <div className="hero-figure">
+            <img src={profilePic} className="hero-photo" alt="Mansi Jain" />
+          </div>
+        </section>
 
-      <section id="skills" className="skills-section">
-        <div className="section-header">Skills</div>
-        <div className="skills">
-          {[
-            ["Programming Languages", ["Python", "JavaScript", "Hack", "HTML / CSS", "SQL", "Ansible"]],
-            ["Web Technologies", ["React", "Redux", "Rest APIs", "WebSockets"]],
-            ["API Frameworks", ["FastAPI", "Flask", "Django"]],
-            ["Databases", ["PostgreSQL", "MongoDB", "ElasticSearch"]],
-            ["Technologies", ["AWS", "Kafka", "Docker", "Kubernetes", "Figma"]],
-          ].map(([type, items]) => (
-            <div className="skills-row" key={type}>
-              <div className="skill-type">{type}: &nbsp;</div>
-              <div>
-                {items.map((s) => (
-                  <span className="skill-pill" key={s}>{s}</span>
-                ))}
+        {/* ---- 01 skills ---- */}
+        <section id="skills" className="toolkit" aria-label="Skills">
+          <MagHead title="Skills" />
+          <div className="toolkit-grid">
+            {SKILLS.map(([label, items]) => (
+              <div className="toolkit-col" key={label}>
+                <div className="toolkit-label">{label}</div>
+                <ul className="toolkit-list">
+                  {items.map((s) => <li key={s}>{s}</li>)}
+                </ul>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="resume" className="resume-section">
-        <div className="section-header">Experience</div>
-        <div className="resume">
-          <div className="resume-card">
-            <div className="chronology">
-              <div className="card-header">Meta</div>
-              <div className="card-date">Aug 2025 - Present</div>
-            </div>
-            <div className="card-details">
-              <div className="resume-job-title">Senior Software Engineer</div>
-            </div>
+            ))}
           </div>
-          <div className="resume-card">
-            <div className="chronology">
-              <div className="card-header">AMD</div>
-              <div className="card-date">Jun 2022 - Aug 2025</div>
-            </div>
-            <div className="card-details">
-              <div className="resume-job-title">Member of Technical Staff</div>
-            </div>
-          </div>
+        </section>
 
-          <div className="resume-card">
-            <div className="chronology">
-              <div className="card-header">AMD</div>
-              <div className="card-date">Mar 2020 - Jun 2022</div>
-            </div>
-            <div className="card-details">
-              <div className="resume-job-title">Senior Software Engineer</div>
-            </div>
-          </div>
+        {/* ---- 02 experience ---- */}
+        <section id="work" className="section">
+          <MagHead title="Experience" />
+          <Timeline items={EXPERIENCE} />
+          <div className="sub-rule">Education</div>
+          <Timeline items={EDUCATION} />
+        </section>
 
-          <div className="resume-card">
-            <div className="chronology">
-              <div className="card-header">Cirrus Logic</div>
-              <div className="card-date">Oct 2017 - Mar 2020</div>
-            </div>
-            <div className="card-details">
-              <div className="resume-job-title">Software Engineer</div>
-            </div>
-          </div>
+        {/* ---- 02 writing ---- */}
+        <Writing />
 
-          <div className="resume-card">
-            <div className="chronology">
-              <div className="card-header">Ericsson</div>
-              <div className="card-date">May 2016 - Dec 2016</div>
-            </div>
-            <div className="card-details">
-              <div className="resume-job-title">Software Engineer Intern</div>
-            </div>
-          </div>
+        {/* ---- 03 reading ---- */}
+        <Reading />
 
-          <div className="section-header">Education</div>
-
-          <div className="resume-card">
-            <div className="chronology">
-              <div className="card-header">Northeastern University</div>
-              <div className="card-date">Jul 2015 - Aug 2017</div>
-            </div>
-            <div className="card-details">
-              <div className="edu-degree">Master of Science</div>
-              <div className="edu-major">Information Systems</div>
-            </div>
-          </div>
-
-          <div className="resume-card">
-            <div className="chronology">
-              <div className="card-header">National Institute of Technology, Raipur</div>
-              <div className="card-date">Jul 2011 - May 2015</div>
-            </div>
-            <div className="card-details">
-              <div className="edu-degree">Bachelor of Technology</div>
-              <div className="edu-major">Information Technology</div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <Writing />
-
-      <Reading />
-
-      <section id="contact" className="contact-section">
-        <div className="section-header">Let's get in touch</div>
-        <div className="contact-details">
+        {/* ---- contact ---- */}
+        <section id="contact" className="contact">
+          <div className="eyebrow">Say hello</div>
+          <h2 className="contact-head">Let's build something worth depending on.</h2>
           <div className="contact-icons">
-            <a href="https://github.com/jainmansi" rel="noreferrer" target="_blank">
-              {github}
-            </a>
-            <a href="https://www.linkedin.com/in/mansijain9/" rel="noreferrer" target="_blank">
-              {linkedin}
-            </a>
-            <a href="https://x.com/mansijain_" rel="noreferrer" target="_blank">
-              {x}
-            </a>
-            <a href="https://jainmansi.substack.com" rel="noreferrer" target="_blank">
-              {substack}
-            </a>
-            <a href="https://www.goodreads.com/user/show/142953896-mansi-jain" rel="noreferrer" target="_blank">
-              {goodreads}
-            </a>
-            <a href="mailto:mansijain.nitrr@gmail.com">
-              {mail}
-            </a>
+            <a href="https://github.com/jainmansi" rel="noreferrer" target="_blank" aria-label="GitHub">{github}</a>
+            <a href="https://www.linkedin.com/in/mansijain9/" rel="noreferrer" target="_blank" aria-label="LinkedIn">{linkedin}</a>
+            <a href="https://x.com/mansijain_" rel="noreferrer" target="_blank" aria-label="X">{x}</a>
+            <a href="mailto:mansijain.nitrr@gmail.com" aria-label="Email">{mail}</a>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
+
       <footer>
-        &copy; 2024 by Mansi Jain
+        <span>&copy; {new Date().getFullYear()} Mansi Jain</span>
+        <span className="footer-note">Built with React · Writing &amp; reading pulled live from Substack &amp; Goodreads</span>
       </footer>
     </>
-
   );
 }
 

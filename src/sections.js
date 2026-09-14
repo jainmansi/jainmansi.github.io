@@ -19,6 +19,16 @@ function useData(file, fallback) {
   return data;
 }
 
+// Numbered magazine section header (kept in sync with App.js MagHead).
+function MagHead({ title }) {
+  return (
+    <div className="mag-head">
+      <h2 className="mag-title">{title}</h2>
+      <span className="mag-rule" />
+    </div>
+  );
+}
+
 // Fade + rise a section into view the first time it's scrolled to.
 function Reveal({ children, className = '', id }) {
   const ref = useRef(null);
@@ -33,53 +43,60 @@ function Reveal({ children, className = '', id }) {
           io.disconnect();
         }
       },
-      { threshold: 0.12 }
+      { threshold: 0.1 }
     );
     io.observe(el);
     return () => io.disconnect();
   }, []);
   return (
-    <section id={id} ref={ref} className={`${className} reveal ${shown ? 'reveal-in' : ''}`}>
+    <section id={id} ref={ref} className={`section ${className} reveal ${shown ? 'reveal-in' : ''}`}>
       {children}
     </section>
+  );
+}
+
+function PostCard({ post, featured }) {
+  return (
+    <a
+      className={featured ? "post-feature" : "post-card"}
+      href={post.link}
+      target="_blank"
+      rel="noreferrer"
+    >
+      {post.image && (
+        <div className="post-thumb" style={{ backgroundImage: `url("${post.image}")` }} />
+      )}
+      <div className="post-body">
+        <div className="post-date">{post.date}</div>
+        <div className="post-title">{post.title}</div>
+        <div className="post-subtitle">{post.subtitle}</div>
+        {featured && <span className="post-more">Read the post {newTab}</span>}
+      </div>
+    </a>
   );
 }
 
 export function Writing() {
   const { posts } = useData('substack.json', { posts: [] });
   if (!posts.length) return null;
+  const [featured, ...rest] = posts;
   return (
-    <Reveal id="writing" className="writing-section">
-      <div className="section-header">Writing</div>
+    <Reveal id="writing">
+      <MagHead title="Writing" />
       <div className="section-sub">
         Recent posts from{' '}
         <a href="https://jainmansi.substack.com" target="_blank" rel="noreferrer">
           Et cetera, et cetera
         </a>
       </div>
-      <div className="post-grid">
-        {posts.map((p) => (
-          <a
-            key={p.link}
-            className="post-card"
-            href={p.link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {p.image && (
-              <div
-                className="post-thumb"
-                style={{ backgroundImage: `url("${p.image}")` }}
-              />
-            )}
-            <div className="post-body">
-              <div className="post-date">{p.date}</div>
-              <div className="post-title">{p.title}</div>
-              <div className="post-subtitle">{p.subtitle}</div>
-            </div>
-          </a>
-        ))}
-      </div>
+      <PostCard post={featured} featured />
+      {rest.length > 0 && (
+        <div className="post-grid">
+          {rest.map((p) => (
+            <PostCard key={p.link} post={p} />
+          ))}
+        </div>
+      )}
       <div className="section-cta">
         <a href="https://jainmansi.substack.com" target="_blank" rel="noreferrer">
           Read more on Substack {newTab}
@@ -110,7 +127,7 @@ export function Reading() {
   if (!current.length && !read.length) return null;
   return (
     <Reveal id="reading" className="reading-section">
-      <div className="section-header">Reading</div>
+      <MagHead title="Reading" />
       {current.length > 0 && (
         <>
           <div className="shelf-label">Currently reading</div>
