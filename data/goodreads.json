@@ -1,10 +1,10 @@
 {
   "current": [
     {
-      "title": "Flowers for Algernon",
-      "author": "Daniel Keyes",
-      "link": "https://www.goodreads.com/review/show/7419775814?utm_medium=api&utm_source=rss",
-      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1689071681l/18373.jpg",
+      "title": "Six Easy Pieces: Essentials of Physics Explained by Its Most Brilliant Teacher",
+      "author": "Richard P. Feynman",
+      "link": "https://www.goodreads.com/review/show/7537814063?utm_medium=api&utm_source=rss",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1400827293l/5553.jpg",
       "rating": 0
     },
     {
@@ -30,6 +30,13 @@
     }
   ],
   "read": [
+    {
+      "title": "Flowers for Algernon",
+      "author": "Daniel Keyes",
+      "link": "https://www.goodreads.com/review/show/7419775814?utm_medium=api&utm_source=rss",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1689071681l/18373.jpg",
+      "rating": 5
+    },
     {
       "title": "Strangers: A Memoir of Marriage",
       "author": "Belle Burden",
@@ -78,13 +85,6 @@
       "link": "https://www.goodreads.com/review/show/6170511138?utm_medium=api&utm_source=rss",
       "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1439697027l/4591._SY475_.jpg",
       "rating": 5
-    },
-    {
-      "title": "Grit: The Power of Passion and Perseverance",
-      "author": "Angela Duckworth",
-      "link": "https://www.goodreads.com/review/show/8471395287?utm_medium=api&utm_source=rss",
-      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1632024090l/27213329._SY475_.jpg",
-      "rating": 2
     }
   ]
 }
