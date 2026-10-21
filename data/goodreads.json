@@ -1,6 +1,13 @@
 {
   "current": [
     {
+      "title": "The Immortal Life of Henrietta Lacks",
+      "author": "Rebecca Skloot",
+      "link": "https://www.goodreads.com/review/show/8909075278?utm_medium=api&utm_source=rss",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327878144l/6493208._SY475_.jpg",
+      "rating": 0
+    },
+    {
       "title": "Six Easy Pieces: Essentials of Physics Explained by Its Most Brilliant Teacher",
       "author": "Richard P. Feynman",
       "link": "https://www.goodreads.com/review/show/7537814063?utm_medium=api&utm_source=rss",
@@ -19,13 +26,6 @@
       "author": "Meghan O'Gieblyn",
       "link": "https://www.goodreads.com/review/show/8406277411?utm_medium=api&utm_source=rss",
       "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1611107182l/56097578._SY475_.jpg",
-      "rating": 0
-    },
-    {
-      "title": "Numbers Don't Lie: 71 Things You Need to Know About the World",
-      "author": "Vaclav Smil",
-      "link": "https://www.goodreads.com/review/show/8084089006?utm_medium=api&utm_source=rss",
-      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1666542864l/50705179._SY475_.jpg",
       "rating": 0
     }
   ],
