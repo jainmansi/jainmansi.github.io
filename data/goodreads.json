@@ -1,6 +1,13 @@
 {
   "current": [
     {
+      "title": "The Code Breaker: Jennifer Doudna, Gene Editing, and the Future of the Human Race",
+      "author": "Walter Isaacson",
+      "link": "https://www.goodreads.com/review/show/9053229520?utm_medium=api&utm_source=rss",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1610894755l/54968118.jpg",
+      "rating": 0
+    },
+    {
       "title": "Why We Sleep: Unlocking the Power of Sleep and Dreams",
       "author": "Matthew Walker",
       "link": "https://www.goodreads.com/review/show/8872542744?utm_medium=api&utm_source=rss",
@@ -19,13 +26,6 @@
       "author": "Steven Pinker",
       "link": "https://www.goodreads.com/review/show/8906750240?utm_medium=api&utm_source=rss",
       "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1502223499l/35696171._SY475_.jpg",
-      "rating": 0
-    },
-    {
-      "title": "God, Human, Animal, Machine: Technology, Metaphor, and the Search for Meaning",
-      "author": "Meghan O'Gieblyn",
-      "link": "https://www.goodreads.com/review/show/8406277411?utm_medium=api&utm_source=rss",
-      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1611107182l/56097578._SY475_.jpg",
       "rating": 0
     }
   ],
